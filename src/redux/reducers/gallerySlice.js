@@ -8,7 +8,7 @@ const initialValues = {
 export const getAllImages = createAsyncThunk(
   "images/fetchallimages",
   async () => {
-    const res = await axios.get("https://art-gallery-backend-ashen.vercel.app/api/v1/get/images");
+    const res = await axios.get("https://art-gallery-backend-one.vercel.app/api/v1/get/images");
     return res.data;
   }
 );
@@ -16,7 +16,7 @@ export const getAllImages = createAsyncThunk(
 export const getAllCategories = createAsyncThunk(
   "images/fetchallcategories",
   async () => {
-    const res = await axios.get("https://art-gallery-backend-ashen.vercel.app/api/v1/get/categories");
+    const res = await axios.get("https://art-gallery-backend-one.vercel.app/api/v1/get/categories");
     return res.data;
   }
 );
@@ -25,7 +25,7 @@ export const postNewCategory = createAsyncThunk(
   "images/postnewcategory",
   async (payload) => {
     const res = await axios.post(
-      "https://art-gallery-backend-ashen.vercel.app/api/v1/add/category",
+      "https://art-gallery-backend-one.vercel.app/api/v1/add/category",
       payload
     );
     return res.data;
@@ -36,7 +36,7 @@ export const postNewImage = createAsyncThunk(
   "images/postnewimage",
   async (payload) => {
     const res = await axios.post(
-      "https://art-gallery-backend-ashen.vercel.app/api/v1/upload/image",
+      "https://art-gallery-backend-one.vercel.app/api/v1/upload/image",
       payload
     );
     return res.data;
@@ -47,7 +47,7 @@ export const getSingleImage = createAsyncThunk(
   "images/getsingleImageData",
   async (payload) => {
     const res = await axios.get(
-      `https://art-gallery-backend-ashen.vercel.app/api/v1/get/singleimage?category=${payload}`
+      `https://art-gallery-backend-one.vercel.app/api/v1/get/singleimage?category=${payload}`
     );
     return res.data;
   }
